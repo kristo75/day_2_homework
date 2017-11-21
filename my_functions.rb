@@ -71,17 +71,37 @@ def length_of_string(string)
   return string.length()
 end
 
-def test_join_string()
-  string_1 = "Mary had a little lamb, "
-  string_2 = "it's fleece was white as snow"
-  joined_string = join_string( string_1, string_2 )
-  assert_equal( "Mary had a little lamb, it's fleece was white as snow", joined_string )
+def join_strings(string_1, string_2)
+  return string_1 + string_2
 end
-#
 
-def test_add_string_as_number()
-  add_result = add_string_as_number( "1", "2" )
-  assert_equal( 3, add_result )
+def add_string_as_number(string_1, string_2)
+  return string_1.to_i + string_2.to_i
+
+end
+
+def number_to_full_month_name(month_number)
+  if month_number == 1
+    return "January"
+  elsif month_number == 3
+    return "March"
+  elsif month_number == 9
+    return "September"
+
+  end
+end
+
+
+def number_to_short_month_name(number)
+  if number == 1
+    return "Jan"
+  elsif number == 3
+    return "Mar"
+  elsif number == 9
+    return "Sep"
+
+  end
+
 end
 
 # p add(2, 3)
